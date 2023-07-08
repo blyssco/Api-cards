@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include backgroundColor;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+header {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .header-text-input {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 4px solid $white;
+    h1 {
+      @include title;
+    }
+    input {
+      @include searchBar;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  .containerCards {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    .displayChar-container {
+      padding: 2rem;
+      width: calc(25% - 5rem);
+      display: flex;
+      flex-direction: column;
+      background-color: $grey;
+      border-radius: 2rem;
+      gap: 2rem;
+      img {
+        align-self: center;
+        border-radius: 50%;
+        width: 8rem;
+      }
+      .name-character {
+        font-family: $fontHeading;
+        color: $white;
+      }
+      .short-description-character {
+        color: $Cleargrey;
+        font-style: $fontitalic;
+      }
+      .long-description {
+        display: none;
+      }
+      .seeMore-character {
+        color: $white;
+        background-color: $blue;
+        border: none;
+        border-radius: 0.8rem;
+        padding: 0.5rem 1rem;
+        width: 8rem;
+        transition: 0.2s;
+        &:hover {
+          background-color: $Cleargrey;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  button {
+    @include button;
+  }
+}
+
+@media (max-width: 1400px) {
+  main {
+    .containerCards {
+      .displayChar-container {
+        width: calc(33.33% - 5rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    .header-text-input {
+      input {
+        width: 15rem;
+      }
+    }
+  }
+  main {
+    .containerCards {
+      .displayChar-container {
+        width: calc(50% - 5rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  header {
+    .header-text-input {
+      flex-direction: column;
+      gap: 2rem;
+      input {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  main {
+    .containerCards {
+      .displayChar-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .seeMore-character {
+          align-self: center;
+        }
+      }
+    }
+  }
+}

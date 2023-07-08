@@ -1,0 +1,96 @@
+@import "../../Abstracts/mixin.scss";
+@import "../../Abstracts/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include backgroundColor;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+header {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .header-text-input {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 4px solid $white;
+    h1 {
+      @include title;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 80%;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: $grey;
+    border-radius: 2rem;
+    text-align: center;
+    img {
+      align-self: center;
+      border-radius: 50%;
+      width: 8rem;
+    }
+    .name-character {
+      font-family: $fontHeading;
+      color: $white;
+    }
+    .short-description-character {
+      color: $Cleargrey;
+      font-style: $fontitalic;
+    }
+    .long-description {
+      color: $white;
+    }
+    .buttons-container {
+      display: flex;
+      gap: 5%;
+      justify-content: center;
+      .delete-character {
+        color: white;
+        background-color: red;
+        border: none;
+        border-radius: 0.8rem;
+        padding: 0.5rem 1rem;
+        width: 8rem;
+        transition: 0.2s;
+        align-self: center;
+        &:hover {
+          background-color: $Cleargrey;
+          cursor: pointer;
+        }
+      }
+      .update-character {
+        color: $white;
+        background-color: $blue;
+        border: none;
+        border-radius: 0.8rem;
+        padding: 0.5rem 1rem;
+        width: 8rem;
+        transition: 0.2s;
+        align-self: center;
+        &:hover {
+          background-color: $Cleargrey;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

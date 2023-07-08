@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(109, 80, 146) 18%, rgb(202, 86, 99) 67%);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+header {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .header-text-input {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 4px solid white;
+}
+header .header-text-input h1 {
+  font-family: "Permanent Marker", cursive;
+  font-family: 40px;
+  color: white;
+}
+header .header-text-input input {
+  width: 22rem;
+  border: none;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  border-radius: 0.8rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+main .containerCards {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+main .containerCards .displayChar-container {
+  padding: 2rem;
+  width: calc(25% - 5rem);
+  display: flex;
+  flex-direction: column;
+  background-color: #373334;
+  border-radius: 2rem;
+  gap: 2rem;
+}
+main .containerCards .displayChar-container img {
+  align-self: center;
+  border-radius: 50%;
+  width: 8rem;
+}
+main .containerCards .displayChar-container .name-character {
+  font-family: "Permanent Marker", cursive;
+  color: white;
+}
+main .containerCards .displayChar-container .short-description-character {
+  color: #a5a4a4;
+  font-style: italic;
+}
+main .containerCards .displayChar-container .long-description {
+  display: none;
+}
+main .containerCards .displayChar-container .seeMore-character {
+  color: white;
+  background-color: #4b7cfc;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 0.5rem 1rem;
+  width: 8rem;
+  transition: 0.2s;
+}
+main .containerCards .displayChar-container .seeMore-character:hover {
+  background-color: #a5a4a4;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer button {
+  background-color: #4b7cfc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.75);
+  margin-bottom: 50px;
+  margin-left: 50px;
+  transition: 0.2s;
+}
+footer button:hover {
+  background-color: #80a2f8;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  main .containerCards .displayChar-container {
+    width: calc(33.33% - 5rem);
+  }
+}
+@media (max-width: 1000px) {
+  header .header-text-input input {
+    width: 15rem;
+  }
+  main .containerCards .displayChar-container {
+    width: calc(50% - 5rem);
+  }
+}
+@media (max-width: 770px) {
+  header .header-text-input {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  header .header-text-input input {
+    padding: 0.5rem 1rem;
+  }
+  main .containerCards .displayChar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  main .containerCards .displayChar-container .seeMore-character {
+    align-self: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

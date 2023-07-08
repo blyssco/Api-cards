@@ -1,0 +1,122 @@
+@import "../../Abstracts/mixin.scss";
+@import "../../Abstracts/variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include backgroundColor;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  h1 {
+    @include title;
+    padding-top: 4rem;
+    width: 80%;
+    padding-bottom: 1.5rem;
+    border-bottom: 4px solid $white;
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  form {
+    background-color: $grey;
+    width: 80%;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 3rem;
+    .displayImage {
+      border-radius: 50%;
+      width: 8rem;
+      height: 8rem;
+      background-color: $Cleargrey;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .upload-img {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      label {
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        color: $white;
+        border: 1px solid $grey;
+        &:hover {
+          background-color: $Cleargrey;
+          cursor: pointer;
+          border: 1px solid $white;
+        }
+      }
+    }
+
+    #name,
+    #shortDescription {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: $Cleargrey;
+      border: 1px solid $white;
+      border-radius: 0.5rem;
+    }
+    #description {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: $Cleargrey;
+      border: 1px solid $white;
+      border-radius: 0.5rem;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      width: 100%;
+      .save {
+        background-color: $blue;
+        color: white;
+        padding: 0.5rem;
+        width: 11rem;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 800;
+        border: none;
+        &:hover {
+          background-color: rgb(36, 105, 185);
+          cursor: pointer;
+        }
+      }
+      .delete {
+        background-color: red;
+        color: white;
+        padding: 0.5rem;
+        width: 11rem;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 800;
+        border: none;
+        &:hover {
+          background-color: rgb(167, 49, 49);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

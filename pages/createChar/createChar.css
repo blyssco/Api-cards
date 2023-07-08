@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(109, 80, 146) 18%, rgb(202, 86, 99) 67%);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header h1 {
+  font-family: "Permanent Marker", cursive;
+  font-family: 40px;
+  color: white;
+  padding-top: 4rem;
+  width: 80%;
+  padding-bottom: 1.5rem;
+  border-bottom: 4px solid white;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main form {
+  background-color: #373334;
+  width: 80%;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+main form .displayImage {
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  background-color: #a5a4a4;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main form .upload-img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main form .upload-img label {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: 1px solid #373334;
+}
+main form .upload-img label:hover {
+  background-color: #a5a4a4;
+  cursor: pointer;
+  border: 1px solid white;
+}
+main form #name,
+main form #shortDescription {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #a5a4a4;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+main form #description {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #a5a4a4;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+main form .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+main form .buttons .save {
+  background-color: #4b7cfc;
+  color: white;
+  padding: 0.5rem;
+  width: 11rem;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  border: none;
+}
+main form .buttons .save:hover {
+  background-color: rgb(36, 105, 185);
+  cursor: pointer;
+}
+main form .buttons .delete {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  width: 11rem;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  border: none;
+}
+main form .buttons .delete:hover {
+  background-color: rgb(167, 49, 49);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=createChar.css.map */

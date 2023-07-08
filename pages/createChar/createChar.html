@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./createChar.js" defer></script>
+    <link rel="stylesheet" href="./createChar.css" />
+    <title>create character</title>
+  </head>
+  <body>
+    <header>
+      <h1>Character Manager</h1>
+    </header>
+    <main>
+      <form id="createNewChar">
+        <div class="displayImage"></div>
+        <div class="upload-img">
+          <input
+            type="file"
+            id="image"
+            name="image"
+            style="display: none"
+            accept="image/*"
+          />
+          <label for="image">Upload image</label>
+        </div>
+        <input
+          type="text"
+          placeholder="Character name - between 14 and 20 letters/chars"
+          id="name"
+          name="name"
+        />
+        <input
+          type="text"
+          placeholder="Characters' short description - between 54 and 70 letters/chars"
+          id="shortDescription"
+          name="shortDescription"
+        />
+        <textarea
+          id="description"
+          name="description"
+          rows="5"
+          cols="50"
+          placeholder="Detailed description of the character - between 248 and 350 letters/chars"
+        ></textarea>
+        <div class="buttons">
+          <button type="submit" form="createNewChar" class="btn save">
+            Save changes
+          </button>
+          <button class="btn delete">Delete changes</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

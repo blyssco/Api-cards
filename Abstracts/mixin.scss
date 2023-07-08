@@ -1,0 +1,39 @@
+@mixin button {
+  background-color: $blue;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.75);
+  margin-bottom: 50px;
+  margin-left: 50px;
+  transition: 0.2s;
+  &:hover {
+    background-color: $blueLighter;
+    cursor: pointer;
+  }
+}
+
+@mixin title {
+  font-family: "Permanent Marker", cursive;
+  font-family: 40px;
+  color: white;
+}
+
+@mixin backgroundColor {
+  background: linear-gradient(
+    90deg,
+    rgba(109, 80, 146, 1) 18%,
+    rgba(202, 86, 99, 1) 67%
+  );
+}
+@mixin searchBar {
+  width: 22rem;
+  border: none;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  border-radius: 0.8rem;
+}
